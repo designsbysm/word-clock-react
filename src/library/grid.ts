@@ -89,7 +89,7 @@ const getMinutes = (minutes: number) => {
 export const getWordsList = (hours: number, minutes: number) =>
   [othersMap.get("its"), getMinutes(minutes), getHours(hours, minutes), othersMap.get("oclock")]
     .flat()
-    .filter(word => !!word) as Word[];
+    .filter(word => !!word);
 
 const isBetween = (min: number, max: number, value: number) => value > min && value <= max;
 
